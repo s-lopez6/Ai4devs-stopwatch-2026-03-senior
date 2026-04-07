@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch & Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Main Menu Screen -->
+      <div id="main-screen" class="screen active">
+        <h1 class="app-title">Time Keeper</h1>
+        <div class="menu-buttons">
+          <button class="menu-btn" id="stopwatch-btn">
+            <span class="icon">⏱️</span>
+            <span class="label">Stopwatch</span>
+          </button>
+          <button class="menu-btn" id="countdown-btn">
+            <span class="icon">⏲️</span>
+            <span class="label">Countdown</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stopwatch Screen -->
+      <div id="stopwatch-screen" class="screen">
+        <div class="timer-display">
+          <div class="time-value">
+            <span class="hours">00</span>:<span class="minutes">00</span>:<span
+              class="seconds"
+              >00</span
+            >:<span class="milliseconds">000</span>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="control-btn primary" id="stopwatch-start">
+            Start
+          </button>
+          <button class="control-btn secondary" id="stopwatch-clear">
+            Clear
+          </button>
+        </div>
+        <button class="back-btn" id="stopwatch-back">← Back</button>
+      </div>
+
+      <!-- Countdown Input Screen -->
+      <div id="countdown-input-screen" class="screen">
+        <div class="timer-display">
+          <div class="time-value">
+            <span class="hours">00</span>:<span class="minutes">00</span>:<span
+              class="seconds"
+              >00</span
+            ><span class="milliseconds" style="display: none">000</span>
+          </div>
+        </div>
+        <div class="keypad">
+          <button class="key-btn" data-digit="7">7</button>
+          <button class="key-btn" data-digit="8">8</button>
+          <button class="key-btn" data-digit="9">9</button>
+          <button class="key-btn" data-digit="4">4</button>
+          <button class="key-btn" data-digit="5">5</button>
+          <button class="key-btn" data-digit="6">6</button>
+          <button class="key-btn" data-digit="1">1</button>
+          <button class="key-btn" data-digit="2">2</button>
+          <button class="key-btn" data-digit="3">3</button>
+          <button class="key-btn wide" id="countdown-input-clear">Clear</button>
+          <button class="key-btn" data-digit="0">0</button>
+        </div>
+        <div class="controls">
+          <button class="control-btn primary" id="countdown-set">Set</button>
+        </div>
+        <button class="back-btn" id="countdown-input-back">← Back</button>
+      </div>
+
+      <!-- Countdown Running Screen -->
+      <div id="countdown-running-screen" class="screen">
+        <div class="timer-display">
+          <div class="time-value">
+            <span class="hours">00</span>:<span class="minutes">00</span>:<span
+              class="seconds"
+              >00</span
+            >:<span class="milliseconds">000</span>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="control-btn primary" id="countdown-start">
+            Start
+          </button>
+          <button class="control-btn secondary" id="countdown-clear">
+            Clear
+          </button>
+        </div>
+        <button class="back-btn" id="countdown-running-back">← Back</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
